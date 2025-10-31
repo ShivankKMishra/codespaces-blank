@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net8.0-android;net8.0-windows10.0.22621.0</TargetFrameworks>
+    <UseMaui>true</UseMaui>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationTitle>MyMauiApp</ApplicationTitle>
+    <RootNamespace>MyMauiApp</RootNamespace>
+    <AssemblyName>MyMauiApp</AssemblyName>
+    <ApplicationId>com.companyname.mymauiapp</ApplicationId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <MauiXaml Include="**\*.xaml" />
+    <MauiAsset Include="Resources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Maui" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
+<Project Sdk="Microsoft.NET.Sdk.Maui">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0-ios;net6.0-android;net6.0-maccatalyst;net6.0-windows10.0.19041.0</TargetFramework>
+    <UseMaui>true</UseMaui>
+    <Nullable>enable</Nullable>
+    <ApplicationTitle>MyMauiApp</ApplicationTitle>
+    <AssemblyName>MyMauiApp</AssemblyName>
+    <RootNamespace>MyMauiApp</RootNamespace>
+    <ApplicationId>com.companyname.mymauiapp</ApplicationId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <MauiXaml Include="MainPage.xaml" />
+    <Compile Include="App.xaml.cs" />
+    <Compile Include="MainPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Maui" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="6.0.100" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\MyMauiApp.sln" />
+  </ItemGroup>
+
+</Project>
